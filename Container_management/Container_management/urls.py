@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('images/',api_views.images),
     path('containers/',api_views.containers),
+    path('containers/logs',api_views.container_logs),
 ]

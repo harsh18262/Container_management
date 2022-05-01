@@ -18,4 +18,9 @@ def images(request):
 def containers(request):
     Containers=dd_views.list_containers()    
     return JsonResponse(Containers, status=status.HTTP_200_OK,safe=False) 
-    
+
+@api_view(['GET'])    
+def container_logs(request):
+    logs=dd_views.logs_container('db94cbd7717b')
+    return JsonResponse(logs, status=status.HTTP_200_OK)
+
